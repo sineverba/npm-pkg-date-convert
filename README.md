@@ -11,7 +11,7 @@ Date Convert
 Use `"/"` as separator.
 
 ## Installation
-`npm install date-convert`
+`npm install @sineverba/date-convert`
 
 ## Usage
 
