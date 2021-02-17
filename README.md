@@ -3,7 +3,8 @@ Date Convert
 
 | CI / CD | Status |
 | ------- | ------ |
-| Travis | [![Build Status](https://travis-ci.com/sineverba/npm-pkg-date-convert.svg?branch=master)](https://travis-ci.com/sineverba/npm-pkg-date-convert) |
+| NPM | [![npm version](https://badge.fury.io/js/%40sineverba%2Fdate-convert.svg)](https://badge.fury.io/js/%40sineverba%2Fdate-convert) |
+| Semaphore CI | [![Build Status](https://sineverba.semaphoreci.com/badges/npm-pkg-date-convert/branches/master.svg)](https://sineverba.semaphoreci.com/projects/npm-pkg-date-convert) |
 | Coverall | [![Coverage Status](https://coveralls.io/repos/github/sineverba/npm-pkg-date-convert/badge.svg?branch=master)](https://coveralls.io/github/sineverba/npm-pkg-date-convert?branch=master) |
 
 `date-convert` converts a 8-digit, ISO format YYYYMMDD, string "19820405" to "05/04/1982" (where 05 is day and 04 is April).
@@ -34,7 +35,7 @@ console.log(isoDate); // returns 20200102
 
 ### Multiple npm accounts in system
 
-+ Copy `.npmrc.example` to `.npmrc`
++ Copy `.npmrc.txt` to `.npmrc`
 + Add token inside
 
 ### Use SSH Git key per-project
