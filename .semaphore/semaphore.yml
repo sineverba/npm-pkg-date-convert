@@ -13,6 +13,8 @@ global_job_config:
 
 blocks:
   - name: Install dependencies
+    skip:
+      when: "tag =~ '.*'"
     task:
       jobs:
         - name: 'Install'
@@ -23,6 +25,8 @@ blocks:
             - cache store
 
   - name: Test
+    skip:
+      when: "tag =~ '.*'"
     task:
       prologue:
         commands:
@@ -39,6 +43,8 @@ blocks:
             - npm run test
 
   - name: Coverage
+    skip:
+      when: "tag =~ '.*'"
     task:
       prologue:
         commands:
@@ -54,4 +60,4 @@ promotions:
   - name: Deploy
     pipeline_file: deploy.yml
     auto_promote:
-      when: "result = 'passed' and tag =~ '.*'"
+      when: "tag =~ '.*'"
