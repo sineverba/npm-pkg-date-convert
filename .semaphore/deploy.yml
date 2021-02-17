@@ -1,0 +1,21 @@
+version: v1.0
+
+name: Deploy to NPM pipeline
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+
+blocks:
+  - name: Deploy
+    task:
+      jobs:
+        - name: Deploy
+          commands:
+            - checkout
+            - mv npmrc.txt .npmrc
+            - npm build
+            - npm publish
+
+      secrets:
+        - name: NPM_TOKEN
