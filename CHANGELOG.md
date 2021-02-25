@@ -1,5 +1,6 @@
 # Next version
 + Change suite test
++ Add Circle CI
 
 ## 0.2.0
 + Move to Semaphore CI
