@@ -1,6 +1,6 @@
 {
   "name": "@sineverba/date-convert",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Convert a date from / to ISO format YYYYMMDD to human readable format (DD/MM/YYYY)",
   "main": "index.js",
   "repository": {

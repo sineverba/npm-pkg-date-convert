@@ -30,13 +30,13 @@ console.log(isoDate); // returns 20200102
 
 ## Tests
 
-`npm test` for simple test
+`npm run test` for simple test
 
-`npm cover` for coverage
+`npm run cover` for coverage
 
 ### Multiple npm accounts in system
 
-+ Copy `.npmrc.txt` to `.npmrc`
++ Copy `npmrc.txt` to `.npmrc`
 + Add token inside
 
 ### Use SSH Git key per-project
