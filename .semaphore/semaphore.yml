@@ -21,7 +21,7 @@ blocks:
           commands:
             - checkout
             - cache restore
-            - npm install
+            - npm ci
             - cache store
 
   - name: Test
