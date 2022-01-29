@@ -1,4 +1,7 @@
-# 1.0.0
+# Next version
++ Reorganize project and fix some trouble on CI/CD
+
+## 1.0.0
 + Change suite test
 + Add Circle CI
 
