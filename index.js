@@ -13,8 +13,7 @@ const HUMAN_FORMAT = 'DD/MM/YYYY';
  */
 function fromIsoToHuman (isoDate) {
     const momentObj = moment(isoDate, ISO_FORMAT);
-    const result = momentObj.format(HUMAN_FORMAT);
-    return result;
+    return momentObj.format(HUMAN_FORMAT);
 }
 
 /**
@@ -25,8 +24,7 @@ function fromIsoToHuman (isoDate) {
  */
 function fromHumanToIso (humanDate) {
     const momentObj = moment(humanDate, HUMAN_FORMAT);
-    const result = momentObj.format(ISO_FORMAT);
-    return result;
+    return momentObj.format(ISO_FORMAT);
 }
 
 module.exports.fromIsoToHuman = fromIsoToHuman;
