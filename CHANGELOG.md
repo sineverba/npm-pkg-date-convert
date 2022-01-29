@@ -1,4 +1,7 @@
-# 1.1.0
+# Next version
++ Fix deploy
+
+## 1.1.0
 + Reorganize project and fix some trouble on CI/CD
 + Add SonarQube and fix some code smells
 + Upgrade dependencies
