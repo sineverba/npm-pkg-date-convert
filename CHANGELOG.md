@@ -1,5 +1,6 @@
 # Next version
 + Reorganize project and fix some trouble on CI/CD
++ Add SonarQube and fix some code smells
 
 ## 1.0.0
 + Change suite test
