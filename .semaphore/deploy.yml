@@ -14,7 +14,7 @@ blocks:
           commands:
             - checkout
             - mv npmrc.txt .npmrc
-            - npm build
+            # - npm build no anymore
             - npm publish
 
       secrets:
