@@ -8,13 +8,7 @@ agent:
 
 global_job_config:
   secrets:
-    #- name: COVERALLS_DATECONVERT_REPO_TOKEN
-    #- name: NPM_TOKEN
-    #- name: SONARCLOUD
     - name: ACCESS_TOKENS
-  #env_vars:
-  #  - name: COVERALLS_REPO_TOKEN
-  #    value: $COVERALLS_NPM_PKG_DATE_CONVERT
 
 blocks:
   - name: Install dependencies
@@ -31,8 +25,7 @@ blocks:
 
   - name: Test
     skip:
-      #when: "tag =~ '.*'"
-      when: true
+      when: "tag =~ '.*'"
     task:
       prologue:
         commands:

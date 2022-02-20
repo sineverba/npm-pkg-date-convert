@@ -1,6 +1,7 @@
 # Next version
 + Fix deploy
 + Refactor Semaphore
++ Clean Semaphore - Upgrade dependencies
 
 ## 1.1.0
 + Reorganize project and fix some trouble on CI/CD
