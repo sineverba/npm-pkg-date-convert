@@ -12,10 +12,10 @@ global_job_config:
   env_vars:
 
 blocks:
-  - name: Deploy
+  - name: Deploy To NPM
     task:
       jobs:
-        - name: Deploy
+        - name: Deploy To NPM
           commands:
             - checkout
             - mv npmrc.txt .npmrc
