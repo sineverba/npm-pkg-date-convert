@@ -1,5 +1,5 @@
 sonar:
-	docker-compose start sonarscanner && docker-compose logs -f sonarscanner
+	docker-compose up sonarscanner
 
 upgrade:
 	npx ncu -u
