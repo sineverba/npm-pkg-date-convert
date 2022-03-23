@@ -9,7 +9,6 @@ agent:
 global_job_config:
   secrets:
     - name: ACCESS_TOKENS
-  env_vars:
 
 blocks:
   - name: Deploy To NPM
