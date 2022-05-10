@@ -10,9 +10,16 @@ Date Convert
 | SonarCloud | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=npm-pkg-date-convert&metric=alert_status)](https://sonarcloud.io/dashboard?id=npm-pkg-date-convert) |
 
 
-`date-convert` converts a 8-digit, ISO format YYYYMMDD, string "19820405" to "05/04/1982" (where 05 is day and 04 is April).
+`date-convert` converts a ISO format YYYYMMDD string "19820405" to "05/04/1982" (where 05 is day and 04 is April). Use `"/"` as separator in output.
 
-Use `"/"` as separator.
+### Accepted INPUT
+
+| Input | Output |
+| ----- | -------|
+| "20220323" | 23/03/2022 |
+| "2022-03-23" | 23/03/2022 |
+| "2022-03-09T12:31:16.699904" | 09/03/2022 |
+
 
 ## Installation
 `npm install @sineverba/date-convert`
@@ -37,6 +44,7 @@ console.log(isoDate); // returns 20200102
 `npm run cover` for coverage
 
 ### SonarQube (local Docker)
++ Copy `.env.bak` in `.env`
 + Spin images `docker-compose up -d`
 + Create a new project inside Sonarqube and grab the token
 + Replace the token in the ENV var of `docker-compose.yml` file

@@ -19,12 +19,13 @@ services:
     volumes:
       - ./:/usr/src
     environment:
-      - SONAR_HOST_URL=http://sonarqube:9000
-      - SONAR_LOGIN=c50a6e3f92b033bd77443c2922d56a84de2c71e9
+      - SONAR_HOST_URL=${SONAR_HOST_URL}
+      - SONAR_LOGIN=${SONAR_LOGIN}
     networks:
       - npm-pkg-date-convert
 
   
 networks:
   npm-pkg-date-convert:
+    name: npm-pkg-date-convert
     driver: bridge

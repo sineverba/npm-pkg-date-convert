@@ -1,16 +1,14 @@
 version: v1.0
 
-name: Build and test Pipeline
+name: Test and build
 agent:
   machine:
     type: e1-standard-2
-    os_image: ubuntu1804
+    os_image: ubuntu2004
 
 global_job_config:
   secrets:
-    - name: COVERALLS_DATECONVERT_REPO_TOKEN
-    - name: NPM_TOKEN
-    - name: SONARCLOUD
+    - name: ACCESS_TOKENS
 
 blocks:
   - name: Install dependencies
@@ -40,7 +38,6 @@ blocks:
               values: [ "10", "12", "14", "16" ]
           commands:
             - sem-version node $NODE_VERSION
-            - node --version
             - npm run test
 
   - name: Coverage
@@ -54,12 +51,13 @@ blocks:
       jobs:
       - name: Coverage
         commands:
+          - export COVERALLS_REPO_TOKEN=$COVERALLS_NPM_PKG_DATE_CONVERT
           - npm run cover
           - cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js
       - name: Sonarcloud
         commands:
           - npm run cover
-          - docker run --rm -e SONAR_HOST_URL="https://sonarcloud.io" -e SONAR_LOGIN=$SONAR_AUTH_TOKEN -v "/home/semaphore/npm-pkg-date-convert:/usr/src" sonarsource/sonar-scanner-cli:4.6
+          - docker run --rm -e SONAR_HOST_URL="https://sonarcloud.io" -e SONAR_LOGIN=$SONAR_TOKEN -v "/home/semaphore/npm-pkg-date-convert:/usr/src" sonarsource/sonar-scanner-cli:4.6
 
 promotions:
   - name: Deploy

@@ -11,6 +11,18 @@ describe('#fromIsoToHuman', function() {
         expect(result).to.equal("08/09/2020");
     });
 
+    it('Should namage hyphen separator', function() {
+        var isoDateWithHyphen = "2020-01-02";
+        var result = fromIsoToHuman(isoDateWithHyphen);
+        expect(result).to.equal("02/01/2020");
+    });
+
+    it('Should namage a longer date', function() {
+        var longerDate = "2022-03-09T12:31:16.699904";
+        var result = fromIsoToHuman(longerDate);
+        expect(result).to.equal("09/03/2022");
+    });
+
 })
 
 describe('#fromHumanToIso', function() {
@@ -21,3 +33,4 @@ describe('#fromHumanToIso', function() {
         expect(result).to.equal("20201231");
     });
 })
+

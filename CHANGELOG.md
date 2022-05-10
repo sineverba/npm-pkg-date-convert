@@ -1,4 +1,10 @@
-# 1.1.0
+# 1.2.0
++ Fix deploy
++ Refactor Semaphore
++ Clean Semaphore - Upgrade dependencies
++ Add handle separator
+
+## 1.1.0
 + Reorganize project and fix some trouble on CI/CD
 + Add SonarQube and fix some code smells
 + Upgrade dependencies

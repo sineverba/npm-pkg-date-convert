@@ -1,21 +1,21 @@
 version: v1.0
 
-name: Deploy to NPM pipeline
+name: Deploy
 agent:
   machine:
     type: e1-standard-2
-    os_image: ubuntu1804
+    os_image: ubuntu2004
+
+global_job_config:
+  secrets:
+    - name: ACCESS_TOKENS
 
 blocks:
-  - name: Deploy
+  - name: Deploy To NPM
     task:
       jobs:
-        - name: Deploy
+        - name: Deploy To NPM
           commands:
             - checkout
             - mv npmrc.txt .npmrc
-            - npm build
             - npm publish
-
-      secrets:
-        - name: NPM_TOKEN
