@@ -1,4 +1,4 @@
-# Next version
+# 1.2.0
 + Fix deploy
 + Refactor Semaphore
 + Clean Semaphore - Upgrade dependencies
