@@ -9,11 +9,16 @@ const HUMAN_FORMAT = 'DD/MM/YYYY';
  * 
  * Return a ISO date (YYYYMMDD) to human format (DD/MM/YYYY)
  * 
- * @param {*} isoDate 
+ * @param {*} isoDate
+ * @param {*} format
  */
-function fromIsoToHuman (isoDate) {
+function fromIsoToHuman (isoDate, format) {
     const momentObj = moment(isoDate, ISO_FORMAT);
-    return momentObj.format(HUMAN_FORMAT);
+    var currentFormat = HUMAN_FORMAT;
+    if (typeof format != "undefined") {
+        currentFormat = format;
+    }
+    return momentObj.format(currentFormat);
 }
 
 /**

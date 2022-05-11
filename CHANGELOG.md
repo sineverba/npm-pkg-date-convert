@@ -1,5 +1,6 @@
 # Next version
 + Upgrade dependencies
++ Add custom format
 
 ## 1.2.0
 + Fix deploy
