@@ -1,4 +1,8 @@
-# 1.2.0
+# 1.3.0
++ Upgrade dependencies
++ Add custom format
+
+## 1.2.0
 + Fix deploy
 + Refactor Semaphore
 + Clean Semaphore - Upgrade dependencies

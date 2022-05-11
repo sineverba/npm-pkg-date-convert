@@ -33,6 +33,9 @@ var {fromIsoToHuman, fromHumanToIso} = require('@sineverba/date-convert');
 var humanDate = fromIsoToHuman("20200102");
 console.log(humanDate); // returns 02/01/2020
 
+var humanDate = fromIsoToHuman("20200102", "AAAA-MM-DD");
+console.log(humanDate); // returns 2020-01-02
+
 var isoDate = fromHumanToIso("02/01/2020")
 console.log(isoDate); // returns 20200102
 ```
@@ -50,11 +53,3 @@ console.log(isoDate); // returns 20200102
 + Replace the token in the ENV var of `docker-compose.yml` file
 + Stop with `docker-compose stop` and restart with `docker-compose up -d`
 + Next spin with `make sonar`
-
-### Multiple npm accounts in system
-
-+ Copy `npmrc.txt` to `.npmrc`
-+ Add token inside
-
-### Use SSH Git key per-project
-`$ git config --local core.sshCommand "ssh -i ~/.ssh/id_rsa"`
