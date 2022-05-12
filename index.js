@@ -25,10 +25,15 @@ function fromIsoToHuman (isoDate, format) {
  * 
  * Return a human date (DD/MM/YYYY) to ISO format
  * 
- * @param {*} humanDate 
+ * @param {*} humanDate
+ * @param {*} format the initial format of human date
  */
-function fromHumanToIso (humanDate) {
-    const momentObj = moment(humanDate, HUMAN_FORMAT);
+function fromHumanToIso (humanDate, format) {
+    var currentFormat = HUMAN_FORMAT;
+    if (typeof format != "undefined") {
+        currentFormat = format;
+    }
+    const momentObj = moment(humanDate, currentFormat);
     return momentObj.format(ISO_FORMAT);
 }
 
