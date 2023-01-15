@@ -47,12 +47,4 @@ console.log(isoDate); // returns 20200102
 
 `npm run test` for simple test
 
-`npm run cover` for coverage
-
-### SonarQube (local Docker)
-+ Copy `.env.bak` in `.env`
-+ Spin images `docker-compose up -d`
-+ Create a new project inside Sonarqube and grab the token
-+ Replace the token in the ENV var of `docker-compose.yml` file
-+ Stop with `docker-compose stop` and restart with `docker-compose up -d`
-+ Next spin with `make sonar`
+`npm run coverage` for coverage

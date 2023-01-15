@@ -1,5 +1,6 @@
 # Next version
 + Handle custom human date format
++ Upgrade dependencies
 
 ## 1.3.0
 + Upgrade dependencies
