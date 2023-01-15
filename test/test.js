@@ -39,5 +39,11 @@ describe('#fromHumanToIso', function() {
         var result = fromHumanToIso(humanDate);
         expect(result).to.equal("20201231");
     });
+
+    it('Should manage a date with hyphen', function() {
+        var humanDate = "2020-12-31";
+        var result = fromHumanToIso(humanDate, "YYYY-MM-DD");
+        expect(result).to.equal("20201231");
+    });
 })
 
