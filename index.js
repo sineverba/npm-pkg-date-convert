@@ -14,7 +14,7 @@ const HUMAN_FORMAT = "DD/MM/YYYY";
  */
 function fromIsoToHuman(isoDate, format) {
   const momentObj = moment(isoDate, ISO_FORMAT);
-  var currentFormat = HUMAN_FORMAT;
+  let currentFormat = HUMAN_FORMAT;
   if (typeof format != "undefined") {
     currentFormat = format;
   }
@@ -29,7 +29,7 @@ function fromIsoToHuman(isoDate, format) {
  * @param {*} format the initial format of human date
  */
 function fromHumanToIso(humanDate, format) {
-  var currentFormat = HUMAN_FORMAT;
+  let currentFormat = HUMAN_FORMAT;
   if (typeof format != "undefined") {
     currentFormat = format;
   }
