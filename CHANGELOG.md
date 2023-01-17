@@ -1,4 +1,7 @@
-# 1.4.0
+# Next version
++ Fix code smell
+
+## 1.4.0
 + Handle custom human date format
 + Upgrade dependencies
 
