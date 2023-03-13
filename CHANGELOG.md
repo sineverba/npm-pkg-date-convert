@@ -1,4 +1,4 @@
-# Next version
+# 2.0.0
 + Fix code smell
 + Upgrade dependencies
 + Move to TypeScript
