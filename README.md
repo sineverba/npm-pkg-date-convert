@@ -29,18 +29,20 @@ Date Convert
 ```js
 // Import module
 var {fromIsoToHuman, fromHumanToIso} = require('@sineverba/date-convert');
+// Or
+// import { fromHumanToIso, fromIsoToHuman } from "@sineverba/date-convert";
 
-var humanDate = fromIsoToHuman("20200102");
+let humanDate = fromIsoToHuman("20200102");
 console.log(humanDate); // returns 02/01/2020
 
-var humanDate = fromIsoToHuman("20200102", "AAAA-MM-DD");
-console.log(humanDate); // returns 2020-01-02
+let humanDateWithFormat = fromIsoToHuman("20200102", "YYYY-MM-DD");
+console.log(humanDateWithFormat); // returns 2020-01-02
 
-var isoDate = fromHumanToIso("02/01/2020");
+let isoDate = fromHumanToIso("02/01/2020");
 console.log(isoDate); // returns 20200102
 
-var isoDate = fromHumanToIso("2020-01-02", "YYYY-MM-DD");
-console.log(isoDate); // returns 20200102
+let isoDateWithFormat = fromHumanToIso("2020-01-02", "YYYY-MM-DD");
+console.log(isoDateWithFormat); // returns 20200102
 ```
 
 ## Tests
