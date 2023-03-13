@@ -1,5 +1,3 @@
-include .env
-
 SONARSCANNER_VERSION=4.8.0
 
 sonar:
