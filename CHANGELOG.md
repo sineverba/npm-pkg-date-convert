@@ -1,6 +1,7 @@
 # Next version
 + Fix code smell
 + Upgrade dependencies
++ Move to TypeScript
 
 ## 1.4.0
 + Handle custom human date format
