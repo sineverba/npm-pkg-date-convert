@@ -1,6 +1,6 @@
 "use strict";
 
-const moment = require("moment");
+import moment = require("moment");
 
 const ISO_FORMAT = "YYYYMMDD";
 const HUMAN_FORMAT = "DD/MM/YYYY";
@@ -12,14 +12,14 @@ const HUMAN_FORMAT = "DD/MM/YYYY";
  * @param {*} isoDate
  * @param {*} format
  */
-function fromIsoToHuman(isoDate, format) {
+export const fromIsoToHuman = (isoDate: string, format: string) => {
   const momentObj = moment(isoDate, ISO_FORMAT);
   let currentFormat = HUMAN_FORMAT;
-  if (typeof format != "undefined") {
+  if (typeof format !== "undefined") {
     currentFormat = format;
   }
   return momentObj.format(currentFormat);
-}
+};
 
 /**
  *
@@ -28,14 +28,11 @@ function fromIsoToHuman(isoDate, format) {
  * @param {*} humanDate
  * @param {*} format the initial format of human date
  */
-function fromHumanToIso(humanDate, format) {
+export const fromHumanToIso = (humanDate: string, format: string) => {
   let currentFormat = HUMAN_FORMAT;
-  if (typeof format != "undefined") {
+  if (typeof format !== "undefined") {
     currentFormat = format;
   }
   const momentObj = moment(humanDate, currentFormat);
   return momentObj.format(ISO_FORMAT);
-}
-
-module.exports.fromIsoToHuman = fromIsoToHuman;
-module.exports.fromHumanToIso = fromHumanToIso;
+};
