@@ -1,4 +1,9 @@
-# 1.4.0
+# 2.0.0
++ Fix code smell
++ Upgrade dependencies
++ Move to TypeScript
+
+## 1.4.0
 + Handle custom human date format
 + Upgrade dependencies
 

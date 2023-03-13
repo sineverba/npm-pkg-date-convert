@@ -1,6 +1,6 @@
 version: v1.0
 
-name: Deploy
+name: Deploy to NPM
 agent:
   machine:
     type: e1-standard-2
@@ -11,11 +11,13 @@ global_job_config:
     - name: ACCESS_TOKENS
 
 blocks:
-  - name: Deploy To NPM
+  - name: Deploy
     task:
       jobs:
-        - name: Deploy To NPM
+        - name: Deploy
           commands:
             - checkout
+            - npm ci
+            - npm run build
             - mv npmrc.txt .npmrc
             - npm publish
