@@ -1,4 +1,7 @@
-# 2.0.0
+# Next version
++ Add Cucumber
+
+## 2.0.0
 + Fix code smell
 + Upgrade dependencies
 + Move to TypeScript
