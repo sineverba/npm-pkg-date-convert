@@ -1,5 +1,6 @@
 # Next version
 + Add Cucumber
++ Upgrade dependencies
 
 ## 2.0.0
 + Fix code smell

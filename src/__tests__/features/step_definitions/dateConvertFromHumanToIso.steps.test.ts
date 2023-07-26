@@ -2,7 +2,7 @@ import { defineFeature, loadFeature } from "jest-cucumber";
 import { fromHumanToIso } from "../../../index";
 
 const feature = loadFeature(
-  "./src/__tests__/features/dateConvertFromHumanToIso.feature"
+  "./src/__tests__/features/dateConvertFromHumanToIso.feature",
 );
 
 defineFeature(feature, (test) => {
