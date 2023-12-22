@@ -1,3 +1,6 @@
+# Next version
++ Upgrade dependencies
+
 # 2.1.0
 + Add Cucumber
 + Upgrade dependencies

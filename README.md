@@ -32,16 +32,16 @@ var {fromIsoToHuman, fromHumanToIso} = require('@sineverba/date-convert');
 // Or
 // import { fromHumanToIso, fromIsoToHuman } from "@sineverba/date-convert";
 
-let humanDate = fromIsoToHuman("20200102");
+const humanDate = fromIsoToHuman("20200102");
 console.log(humanDate); // returns 02/01/2020
 
-let humanDateWithFormat = fromIsoToHuman("20200102", "YYYY-MM-DD");
+const humanDateWithFormat = fromIsoToHuman("20200102", "YYYY-MM-DD");
 console.log(humanDateWithFormat); // returns 2020-01-02
 
-let isoDate = fromHumanToIso("02/01/2020");
+const isoDate = fromHumanToIso("02/01/2020");
 console.log(isoDate); // returns 20200102
 
-let isoDateWithFormat = fromHumanToIso("2020-01-02", "YYYY-MM-DD");
+const isoDateWithFormat = fromHumanToIso("2020-01-02", "YYYY-MM-DD");
 console.log(isoDateWithFormat); // returns 20200102
 ```
 
