@@ -1,5 +1,6 @@
 # Next version
 + Upgrade dependencies
++ Change `var` to `const` in tests
 
 # 2.1.0
 + Add Cucumber
