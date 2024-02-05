@@ -1,4 +1,7 @@
-# 2.2.0
+# Next version
++ Upgrade dependencies
+
+## 2.2.0
 + Upgrade dependencies
 + Change `var` to `const` in tests
 
