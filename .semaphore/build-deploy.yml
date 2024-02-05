@@ -20,7 +20,7 @@ blocks:
         - name: Deploy
           commands:
             - checkout
-            - npm install -g npm@$NPM_VERSION
+            - npm install npm@$NPM_VERSION
             - npm ci
             - npm run build
             - mv npmrc.txt .npmrc
