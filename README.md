@@ -12,6 +12,15 @@ Date Convert
 
 `date-convert` converts a ISO format YYYYMMDD string "19820405" to "05/04/1982" (where 05 is day and 04 is April). Use `"/"` as separator in output.
 
+It works also with a date with other format. Simply, call the method `fromIsoToHuman`.
+
+For example
+
+```js
+const newDate = fromIsoToHuman("2024-01-31T15:27:42.427438", "DD/MM/YYYY");
+console.log(newDate); // It prints 31/01/2024
+```
+
 ### Accepted INPUT
 
 | Input | Output |
@@ -28,9 +37,9 @@ Date Convert
 
 ```js
 // Import module
-var {fromIsoToHuman, fromHumanToIso} = require('@sineverba/date-convert');
+import { fromHumanToIso, fromIsoToHuman } from "@sineverba/date-convert";
 // Or
-// import { fromHumanToIso, fromIsoToHuman } from "@sineverba/date-convert";
+// var {fromIsoToHuman, fromHumanToIso} = require('@sineverba/date-convert');
 
 const humanDate = fromIsoToHuman("20200102");
 console.log(humanDate); // returns 02/01/2020
