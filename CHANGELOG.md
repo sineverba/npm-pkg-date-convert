@@ -1,4 +1,4 @@
-# Next version
+# 2.3.0
 + Upgrade dependencies
 + Upgrade dependencies
 + Migrate constants to ENUM
