@@ -2,8 +2,10 @@
 
 import moment = require("moment");
 
-const ISO_FORMAT = "YYYYMMDD";
-const HUMAN_FORMAT = "DD/MM/YYYY";
+enum DateFormat {
+  IsoFormat = "YYYYMMDD",
+  HumanFormat = "DD/MM/YYYY",
+}
 
 /**
  *
@@ -13,8 +15,8 @@ const HUMAN_FORMAT = "DD/MM/YYYY";
  * @param {*} format
  */
 export const fromIsoToHuman = (isoDate: string, format: string) => {
-  const momentObj = moment(isoDate, ISO_FORMAT);
-  let currentFormat = HUMAN_FORMAT;
+  const momentObj = moment(isoDate, DateFormat.IsoFormat);
+  let currentFormat = DateFormat.HumanFormat.toString();
   if (typeof format !== "undefined") {
     currentFormat = format;
   }
@@ -29,10 +31,10 @@ export const fromIsoToHuman = (isoDate: string, format: string) => {
  * @param {*} format the initial format of human date
  */
 export const fromHumanToIso = (humanDate: string, format: string) => {
-  let currentFormat = HUMAN_FORMAT;
+  let currentFormat = DateFormat.HumanFormat.toString();
   if (typeof format !== "undefined") {
     currentFormat = format;
   }
   const momentObj = moment(humanDate, currentFormat);
-  return momentObj.format(ISO_FORMAT);
+  return momentObj.format(DateFormat.IsoFormat);
 };

@@ -1,4 +1,9 @@
-# 2.2.0
+# 2.3.0
++ Upgrade dependencies
++ Upgrade dependencies
++ Migrate constants to ENUM
+
+## 2.2.0
 + Upgrade dependencies
 + Change `var` to `const` in tests
 
